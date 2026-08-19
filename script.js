@@ -20,16 +20,18 @@ document.querySelectorAll('.package-button').forEach((button) => {
   });
 });
 
-document.querySelectorAll('.training-tab').forEach((tab) => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.training-tab').forEach((item) => {
+document.querySelectorAll('.training-options').forEach((group) => {
+  group.querySelectorAll('.training-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      group.querySelectorAll('.training-tab').forEach((item) => {
       item.classList.toggle('active', item === tab);
       item.setAttribute('aria-selected', item === tab ? 'true' : 'false');
-    });
-    document.querySelectorAll('.frequency-grid').forEach((panel) => {
-      const active = panel.id === tab.dataset.target;
-      panel.classList.toggle('active', active);
-      panel.hidden = !active;
+      });
+      group.querySelectorAll('.frequency-grid').forEach((panel) => {
+        const active = panel.id === tab.dataset.target;
+        panel.classList.toggle('active', active);
+        panel.hidden = !active;
+      });
     });
   });
 });
