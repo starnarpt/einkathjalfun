@@ -36,6 +36,22 @@ document.querySelectorAll('.training-options').forEach((group) => {
   });
 });
 
+const personalTraining = document.querySelector('#einka-val');
+personalTraining?.querySelectorAll('.commitment-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const months = button.dataset.months;
+    personalTraining.querySelectorAll('.commitment-button').forEach((item) => {
+      item.classList.toggle('active', item === button);
+    });
+    personalTraining.querySelectorAll('.frequency-grid article').forEach((card) => {
+      const price = card.getAttribute(`data-price-${months}`);
+      const priceElement = card.querySelector('div strong');
+      if (price && priceElement) priceElement.textContent = price;
+      card.dataset.package = `${card.dataset.basePackage} · ${months} ${months === '1' ? 'mánuður' : 'mánuðir'}`;
+    });
+  });
+});
+
 const form = document.querySelector('#contact-form');
 const formNote = document.querySelector('#form-note');
 form?.addEventListener('submit', (event) => {
