@@ -129,6 +129,18 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .training-options { margin-top: 55px; padding: 38px; background: white; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 18px 50px rgba(18,85,160,.07); scroll-margin-top: 110px; }
 .online-options { background: linear-gradient(145deg, #fff 0%, #f4f9ff 100%); }
 .saving { display: block; margin-top: 10px; color: var(--blue); font-size: 11px; font-style: normal; font-weight: 800; }
+.single-session { margin-top: 24px; padding: 30px 34px; display: grid; grid-template-columns: 1.35fr auto 1fr; gap: 32px; align-items: center; background: var(--blue-deep); color: white; border-radius: 22px; box-shadow: var(--shadow); }
+.single-session h3 { margin: 0 0 8px; font: 800 clamp(32px,4vw,48px)/1 var(--display); text-transform: uppercase; }
+.single-session p { margin: 0; color: #d7e8fb; font-size: 13px; }
+.single-session .eyebrow { color: var(--sky); margin-bottom: 12px; }
+.single-session .eyebrow span { background: var(--sky); }
+.single-session .access-note { margin-top: 8px; color: white; font-weight: 600; }
+.single-session-price { text-align: center; white-space: nowrap; }
+.single-session-price strong { display: block; font: 800 44px/1 var(--display); }
+.single-session-price span { color: var(--sky); font-size: 11px; font-weight: 700; }
+.location-buttons { display: grid; gap: 8px; }
+.location-buttons .button { width: 100%; }
+.single-session .button-outline { border-color: #6f8baa; color: white; }
 .training-options-head { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 30px; }
 .training-options-head h3 { margin: 0; font: 800 clamp(38px,4vw,58px)/.95 var(--display); text-transform: uppercase; }
 .training-options-head > div:first-child > p:last-child { max-width: 610px; margin-bottom: 0; color: var(--muted); font-size: 13px; }
@@ -192,6 +204,8 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .service-grid, .pricing-grid { grid-template-columns: 1fr; max-width: 620px; margin-inline: auto; }
   .training-options-head { align-items: start; flex-direction: column; }
   .price-card.popular { transform: none; }
+  .single-session { grid-template-columns: 1fr; text-align: left; }
+  .single-session-price { text-align: left; }
   .about-grid { grid-template-columns: 1fr; gap: 50px; }
   .about-visual { max-width: 560px; width: 100%; margin-inline: auto; }
   .contact-section { grid-template-columns: 1fr; gap: 50px; }
