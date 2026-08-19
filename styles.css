@@ -70,7 +70,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .pulse { width: 11px; height: 11px; border-radius: 50%; background: #33c77a; box-shadow: 0 0 0 6px rgba(51,199,122,.15); }
 
 .marquee { overflow: hidden; padding: 18px 0; background: var(--blue); color: white; transform: rotate(-1.2deg) scale(1.02); }
-.marquee div { width: max-content; font: 800 24px var(--display); letter-spacing: 2px; word-spacing: 18px; white-space: nowrap; }
+.marquee div { width: max-content; padding-inline: 3vw; font: 800 24px var(--display); letter-spacing: 2px; word-spacing: 18px; white-space: nowrap; }
 .marquee span { color: var(--sky); }
 
 .section-heading { max-width: 680px; margin-bottom: 54px; }
@@ -127,6 +127,8 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .pricing-note a { color: var(--blue); font-weight: 700; border-bottom: 1px solid var(--blue); }
 
 .training-options { margin-top: 55px; padding: 38px; background: white; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 18px 50px rgba(18,85,160,.07); scroll-margin-top: 110px; }
+.online-options { background: linear-gradient(145deg, #fff 0%, #f4f9ff 100%); }
+.saving { display: block; margin-top: 10px; color: var(--blue); font-size: 11px; font-style: normal; font-weight: 800; }
 .training-options-head { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 30px; }
 .training-options-head h3 { margin: 0; font: 800 clamp(38px,4vw,58px)/.95 var(--display); text-transform: uppercase; }
 .training-options-head > div:first-child > p:last-child { max-width: 610px; margin-bottom: 0; color: var(--muted); font-size: 13px; }
