@@ -275,9 +275,12 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.1); }
 .contact-form textarea { resize: vertical; }
 .contact-form .button { width: 100%; }
+.contact-form .button:disabled { cursor: wait; opacity: .7; }
+.form-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 .form-note { color: var(--muted); font-size: 10px; text-align: center; margin: 13px 0 0; }
 .form-note a { color: var(--blue); font-weight: 700; }
 .form-note.success { color: #17834b; font-size: 12px; font-weight: 600; }
+.form-note.error { color: #b42318; font-size: 12px; font-weight: 600; }
 
 footer { padding: 45px 0; background: #061d3b; color: white; }
 .footer-inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; }
