@@ -47,6 +47,12 @@ personalTraining?.querySelectorAll('.commitment-button').forEach((button) => {
       const price = card.getAttribute(`data-price-${months}`);
       const priceElement = card.querySelector('div strong');
       if (price && priceElement) priceElement.textContent = price;
+      const saving = card.getAttribute(`data-saving-${months}`);
+      const savingElement = card.querySelector('.personal-saving');
+      if (savingElement) {
+        savingElement.textContent = saving ? `Þú sparar ${saving} kr. samtals` : '';
+        savingElement.hidden = !saving;
+      }
       card.dataset.package = `${card.dataset.basePackage} · ${months} ${months === '1' ? 'mánuður' : 'mánuðir'}`;
     });
   });

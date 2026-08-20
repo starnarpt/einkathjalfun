@@ -154,6 +154,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .training-options { margin-top: 55px; padding: 38px; background: white; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 18px 50px rgba(18,85,160,.07); scroll-margin-top: 110px; }
 .online-options { background: linear-gradient(145deg, #fff 0%, #f4f9ff 100%); }
 .saving { display: block; margin-top: 10px; color: var(--blue); font-size: 11px; font-style: normal; font-weight: 800; }
+.personal-saving[hidden] { display: none; }
 .commitment-picker { margin: 0 0 26px; display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
 .commitment-button { min-height: 82px; position: relative; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: #f7fbff; color: var(--ink); cursor: pointer; text-align: left; }
 .commitment-button strong, .commitment-button span { display: block; }
