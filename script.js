@@ -54,28 +54,34 @@ personalTraining?.querySelectorAll('.commitment-button').forEach((button) => {
 
 const form = document.querySelector('#contact-form');
 const formNote = document.querySelector('#form-note');
-form?.addEventListener('submit', (event) => {
+form?.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const submitButton = form.querySelector('button[type="submit"]');
   const data = new FormData(form);
-  const name = data.get('name') || '';
-  const email = data.get('email') || '';
-  const phone = data.get('phone') || 'Ekki gefið upp';
-  const selectedPackage = data.get('package') || 'Ekki valið';
-  const location = data.get('location') || 'Ekki valið';
-  const goals = data.get('goals') || '';
-  const subject = `Fyrirspurn frá ${name} — SA Fitness`;
-  const body = [
-    `Nafn: ${name}`,
-    `Netfang: ${email}`,
-    `Símanúmer: ${phone}`,
-    `Þjónusta: ${selectedPackage}`,
-    `Stöð: ${location}`,
-    '',
-    'Markmið:',
-    goals,
-  ].join('\n');
+  const payload = Object.fromEntries(data.entries());
 
-  formNote.textContent = 'Tölvupóstforritið þitt opnast nú með tilbúinni fyrirspurn. Ýttu þar á Senda til að ljúka.';
-  formNote.classList.add('success');
-  window.location.href = `mailto:stefanarnar.pt@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sendi…';
+  formNote.textContent = 'Sendi fyrirspurnina…';
+  formNote.classList.remove('success', 'error');
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) throw new Error('Ekki tókst að senda fyrirspurnina.');
+
+    form.reset();
+    formNote.textContent = 'Takk fyrir! Fyrirspurnin hefur verið send og Stefán hefur samband eins fljótt og auðið er.';
+    formNote.classList.add('success');
+  } catch (error) {
+    formNote.innerHTML = 'Ekki tókst að senda í þetta sinn. Prófaðu aftur eða sendu beint á <a href="mailto:stefanarnar.pt@gmail.com">stefanarnar.pt@gmail.com</a>.';
+    formNote.classList.add('error');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Senda fyrirspurn';
+  }
 });
