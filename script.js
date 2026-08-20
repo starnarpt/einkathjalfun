@@ -56,6 +56,26 @@ const form = document.querySelector('#contact-form');
 const formNote = document.querySelector('#form-note');
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
-  formNote.textContent = 'Takk fyrir! Eyðublaðið er í prufuham og verður tengt við Resend áður en síðan opnar formlega.';
+  const data = new FormData(form);
+  const name = data.get('name') || '';
+  const email = data.get('email') || '';
+  const phone = data.get('phone') || 'Ekki gefið upp';
+  const selectedPackage = data.get('package') || 'Ekki valið';
+  const location = data.get('location') || 'Ekki valið';
+  const goals = data.get('goals') || '';
+  const subject = `Fyrirspurn frá ${name} — SA Fitness`;
+  const body = [
+    `Nafn: ${name}`,
+    `Netfang: ${email}`,
+    `Símanúmer: ${phone}`,
+    `Þjónusta: ${selectedPackage}`,
+    `Stöð: ${location}`,
+    '',
+    'Markmið:',
+    goals,
+  ].join('\n');
+
+  formNote.textContent = 'Tölvupóstforritið þitt opnast nú með tilbúinni fyrirspurn. Ýttu þar á Senda til að ljúka.';
   formNote.classList.add('success');
+  window.location.href = `mailto:stefanarnar.pt@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
