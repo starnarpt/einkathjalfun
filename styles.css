@@ -116,6 +116,11 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
 .pricing-section { display: flex; flex-direction: column; }
 .pricing-section > .section-heading { order: 0; }
+.deal-banner { order: 0; margin: -18px 0 48px; padding: 18px 24px; display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 18px; border: 1px solid #a8d3ff; border-radius: 15px; background: linear-gradient(90deg,#e5f3ff,#f7fbff); color: var(--blue-deep); }
+.deal-kicker { padding: 6px 11px; border-radius: 999px; background: var(--blue); color: white; font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+.deal-banner strong { font: 700 18px var(--display); text-transform: uppercase; }
+.deal-copy { color: var(--muted); font-size: 11px; }
+.deal-banner a { color: var(--blue); font-size: 11px; font-weight: 800; white-space: nowrap; }
 .inperson-highlight { order: 1; margin-bottom: 48px; padding: 32px 38px; display: flex; align-items: center; justify-content: space-between; gap: 35px; background: linear-gradient(120deg, var(--blue-deep), #175ca8); color: white; border-radius: 22px; box-shadow: var(--shadow); }
 .inperson-highlight h3 { margin: 0 0 8px; font: 800 clamp(36px,4vw,54px)/1 var(--display); text-transform: uppercase; }
 .inperson-highlight p { margin: 0; color: #d7e8fb; }
@@ -136,6 +141,9 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .price .from { color: var(--blue); font-size: 10px; font-weight: 800; text-transform: uppercase; writing-mode: vertical-rl; transform: rotate(180deg); }
 .price strong { font: 800 51px/1 var(--display); letter-spacing: -1.5px; }
 .price span { color: var(--muted); font-size: 10px; line-height: 1.3; }
+.deal-note { margin: -2px 0 17px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border-radius: 9px; background: var(--blue-soft); color: var(--blue-deep); }
+.deal-note b { color: var(--blue); font-size: 9px; text-transform: uppercase; letter-spacing: .6px; white-space: nowrap; }
+.deal-note span { color: var(--blue-deep); font-size: 9px; font-weight: 700; text-align: right; }
 .price-card > p { min-height: 66px; color: var(--muted); font-size: 13px; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
 .price-card ul { padding: 0; margin: 15px 0 30px; list-style: none; display: grid; gap: 12px; flex: 1; }
 .price-card li { position: relative; padding-left: 24px; font-size: 13px; }
@@ -239,6 +247,13 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .comparison-card.featured > p { color: #bdd1e8; }
 .comparison-card.featured .check-list span { background: var(--sky); }
 .comparison-card .button { width: 100%; margin-top: 10px; }
+.comparison-deal { margin: 22px 0 12px; padding: 14px; border-radius: 11px; background: var(--blue-soft); }
+.comparison-deal strong, .comparison-deal span { display: block; }
+.comparison-deal strong { color: var(--blue-deep); font: 800 27px var(--display); }
+.comparison-deal span { margin-top: 4px; color: var(--muted); font-size: 9px; font-weight: 700; }
+.comparison-card.featured .comparison-deal { background: rgba(255,255,255,.1); }
+.comparison-card.featured .comparison-deal strong { color: white; }
+.comparison-card.featured .comparison-deal span { color: #bdd1e8; }
 
 .cta-band { padding: 90px 0; text-align: center; background: var(--blue); color: white; position: relative; overflow: hidden; }
 .cta-band::before, .cta-band::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; }
@@ -283,6 +298,8 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .service-grid, .pricing-grid { grid-template-columns: 1fr; max-width: 620px; margin-inline: auto; }
   .training-options-head { align-items: start; flex-direction: column; }
   .price-card.popular { transform: none; }
+  .deal-banner { grid-template-columns: auto 1fr; }
+  .deal-copy { grid-column: 1 / -1; }
   .inperson-highlight { flex-direction: column; align-items: flex-start; }
   .single-session { grid-template-columns: 1fr; text-align: left; }
   .single-session-price { text-align: left; }
@@ -331,6 +348,11 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .about-badge { width: 80px; height: 80px; right: 8px; }
   .about-badge strong { font-size: 28px; }
   .price strong { font-size: 43px; }
+  .deal-banner { margin-top: -20px; padding: 18px; grid-template-columns: 1fr; gap: 10px; text-align: center; }
+  .deal-kicker { justify-self: center; }
+  .deal-copy { grid-column: auto; }
+  .deal-note { align-items: flex-start; flex-direction: column; }
+  .deal-note span { text-align: left; }
   .training-options { padding: 26px 18px; }
   .commitment-picker { grid-template-columns: 1fr; }
   .training-tabs { width: 100%; }
