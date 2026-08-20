@@ -319,6 +319,9 @@
           </div>
         </div>
         <form class="contact-form reveal" id="contact-form">
+          <label class="form-honeypot" aria-hidden="true">Vefsíða
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </label>
           <div class="field-row">
             <label>Fullt nafn<input type="text" name="name" autocomplete="name" required placeholder="Nafnið þitt" /></label>
             <label>Netfang<input type="email" name="email" autocomplete="email" required placeholder="nafn@netfang.is" /></label>
@@ -363,7 +366,7 @@
           </label>
           <label>Hvert er markmiðið þitt?<textarea name="goals" required rows="4" placeholder="Segðu mér aðeins frá því sem þú vilt ná fram..."></textarea></label>
           <button class="button" type="submit">Senda fyrirspurn <span>→</span></button>
-          <p class="form-note" id="form-note">Við innsendingu opnast tölvupóstur með svörunum þínum. Þú getur líka skrifað beint á <a href="mailto:stefanarnar.pt@gmail.com">stefanarnar.pt@gmail.com</a>.</p>
+          <p class="form-note" id="form-note" aria-live="polite">Fyrirspurnin fer beint til Stefáns. Þú færð svar eins fljótt og auðið er.</p>
         </form>
       </section>
     </main>
