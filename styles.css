@@ -276,6 +276,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .contact-form textarea { resize: vertical; }
 .contact-form .button { width: 100%; }
 .form-note { color: var(--muted); font-size: 10px; text-align: center; margin: 13px 0 0; }
+.form-note a { color: var(--blue); font-weight: 700; }
 .form-note.success { color: #17834b; font-size: 12px; font-weight: 600; }
 
 footer { padding: 45px 0; background: #061d3b; color: white; }
