@@ -47,6 +47,9 @@ personalTraining?.querySelectorAll('.commitment-button').forEach((button) => {
       const price = card.getAttribute(`data-price-${months}`);
       const priceElement = card.querySelector('div strong');
       if (price && priceElement) priceElement.textContent = price;
+      const oldPrice = card.getAttribute(`data-old-price-${months}`);
+      const oldPriceElement = card.querySelector('.personal-old-price');
+      if (oldPrice && oldPriceElement) oldPriceElement.textContent = oldPrice;
       const saving = card.getAttribute(`data-saving-${months}`);
       const savingElement = card.querySelector('.personal-saving');
       if (savingElement) {
