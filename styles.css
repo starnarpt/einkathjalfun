@@ -228,6 +228,17 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .single-page-booking { padding: 44px; display: grid; grid-template-columns: 1.4fr .6fr; gap: 65px; align-items: center; border-radius: 24px; background: white; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .single-page-booking p:not(.eyebrow) { color: var(--muted); line-height: 1.7; }
 .single-page-booking .button-outline { background: white; }
+.starter-offer { position: relative; z-index: 2; color: white; background: var(--blue-deep); }
+.starter-offer-inner { min-height: 230px; padding-block: 38px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 60px; align-items: center; }
+.starter-offer-label { display: inline-flex; width: fit-content; padding: 8px 12px; border-radius: 999px; color: var(--blue-deep); background: var(--sky); font-size: 10px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+.starter-offer h2 { margin: 16px 0 8px; font: 800 clamp(46px,5.6vw,76px)/.9 var(--display); text-transform: uppercase; }
+.starter-offer-copy p { max-width: 690px; margin: 0; color: #bdd1e8; font-size: 15px; line-height: 1.65; }
+.starter-offer-action { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+.starter-offer-price { display: flex; align-items: baseline; gap: 8px; }
+.starter-offer-price strong { color: white; font: 800 clamp(54px,6vw,82px)/.8 var(--display); }
+.starter-offer-price span { color: #bdd1e8; font-weight: 700; }
+.starter-booking { border: 2px solid var(--blue); box-shadow: 0 22px 65px rgba(22,119,255,.15); }
+.starter-booking .starter-offer-label { margin-bottom: 22px; }
 .training-moment-section { padding-top: 0; background: var(--off-white); }
 .training-moment { position: relative; min-height: 560px; overflow: hidden; border-radius: 26px; background: var(--blue-deep); box-shadow: var(--shadow); }
 .training-moment::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 42%, rgba(4,24,54,.08) 62%, rgba(4,24,54,.82) 100%); pointer-events: none; }
@@ -332,6 +343,8 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .detail-card { min-height: auto; }
   .detail-card h3 { margin-top: 28px; }
   .split-feature, .single-page-booking { grid-template-columns: 1fr; }
+  .starter-offer-inner { grid-template-columns: 1fr; gap: 30px; }
+  .starter-offer-action { align-items: flex-start; }
   .training-moment { min-height: 500px; }
   .training-moment img { min-height: 500px; object-position: 58% center; }
 }
@@ -346,6 +359,9 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .hero h1 { font-size: clamp(66px, 22vw, 88px); }
   .hero-lead { font-size: 16px; }
   .hero-actions { flex-direction: column; gap: 17px; }
+  .starter-offer-inner { padding-block: 34px; }
+  .starter-offer-action { width: 100%; }
+  .starter-offer-action .button { width: 100%; }
   .trust-row { gap: 0; margin-top: 42px; }
   .trust-row div { padding-right: 12px; margin-right: 12px; }
   .trust-row strong { font-size: 20px; }
