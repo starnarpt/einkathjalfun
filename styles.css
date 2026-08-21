@@ -281,6 +281,13 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .comparison-card.featured .comparison-deal strong { color: white; }
 .comparison-card.featured .comparison-deal span { color: #bdd1e8; }
 
+.testimonial-section { background: var(--off-white); }
+.testimonial-card { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 34px; align-items: start; max-width: 1040px; }
+.testimonial-mark { font-family: Georgia, serif; font-size: 150px; line-height: .72; color: var(--blue); }
+.testimonial-card h2 { max-width: 760px; margin: 0 0 24px; font-family: var(--display); font-size: clamp(42px, 5vw, 70px); line-height: .95; text-transform: uppercase; }
+.testimonial-card blockquote { max-width: 840px; margin: 0; color: var(--ink); font-size: clamp(18px, 2vw, 24px); line-height: 1.62; }
+.testimonial-card cite { display: block; margin-top: 24px; color: var(--blue-deep); font-style: normal; font-weight: 800; letter-spacing: .04em; }
+
 .cta-band { padding: 90px 0; text-align: center; background: var(--blue); color: white; position: relative; overflow: hidden; }
 .cta-band::before, .cta-band::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; }
 .cta-band::before { width: 430px; height: 430px; left: -150px; top: -180px; }
@@ -356,6 +363,8 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
 }
 
 @media (max-width: 620px) {
+  .testimonial-card { grid-template-columns: 1fr; gap: 4px; }
+  .testimonial-mark { font-size: 92px; }
   .section-shell { width: min(100% - 30px, 1180px); }
   .section { padding: 85px 0; }
   .site-header { width: calc(100% - 20px); padding-inline: 14px; height: 68px; }
