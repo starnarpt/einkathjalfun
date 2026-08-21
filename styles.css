@@ -235,10 +235,16 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .starter-offer-copy p { max-width: 690px; margin: 0; color: #bdd1e8; font-size: 15px; line-height: 1.65; }
 .starter-offer-action { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
 .starter-offer-price { display: flex; align-items: baseline; gap: 8px; }
+.starter-offer-price del { margin-right: 8px; color: #a9c1dc; font-size: 18px; font-weight: 700; text-decoration-thickness: 2px; }
 .starter-offer-price strong { color: white; font: 800 clamp(54px,6vw,82px)/.8 var(--display); }
 .starter-offer-price span { color: #bdd1e8; font-weight: 700; }
 .starter-booking { border: 2px solid var(--blue); box-shadow: 0 22px 65px rgba(22,119,255,.15); }
 .starter-booking .starter-offer-label { margin-bottom: 22px; }
+.offer-price del { display: block; margin-bottom: 3px; color: var(--muted); font-size: 14px; font-weight: 700; text-decoration-thickness: 2px; }
+.subpage-offer-price { margin: -10px 0 22px; display: flex; align-items: baseline; gap: 14px; }
+.subpage-offer-price del { color: var(--muted); font-size: 18px; font-weight: 700; text-decoration-thickness: 2px; }
+.subpage-offer-price strong { color: var(--blue); font: 800 42px/1 var(--display); }
+.single-page-booking .katla-trial-note { margin-top: 14px; padding: 12px 15px; border-radius: 10px; color: var(--blue-deep) !important; background: var(--blue-soft); font-size: 12px; font-weight: 600; }
 .training-moment-section { padding-top: 0; background: var(--off-white); }
 .training-moment { position: relative; min-height: 560px; overflow: hidden; border-radius: 26px; background: var(--blue-deep); box-shadow: var(--shadow); }
 .training-moment::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 42%, rgba(4,24,54,.08) 62%, rgba(4,24,54,.82) 100%); pointer-events: none; }
@@ -362,6 +368,9 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .starter-offer-inner { padding-block: 34px; }
   .starter-offer-action { width: 100%; }
   .starter-offer-action .button { width: 100%; }
+  .starter-offer-price { flex-wrap: wrap; }
+  .starter-offer-price del { width: 100%; margin: 0 0 4px; }
+  .subpage-offer-price { align-items: flex-start; flex-direction: column; gap: 5px; }
   .trust-row { gap: 0; margin-top: 42px; }
   .trust-row div { padding-right: 12px; margin-right: 12px; }
   .trust-row strong { font-size: 20px; }
