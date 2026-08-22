@@ -235,6 +235,10 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .starter-offer-label { display: inline-flex; width: fit-content; padding: 8px 12px; border-radius: 999px; color: var(--blue-deep); background: var(--sky); font-size: 10px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
 .starter-offer h2 { margin: 16px 0 8px; font: 800 clamp(46px,5.6vw,76px)/.9 var(--display); text-transform: uppercase; }
 .starter-offer-copy p { max-width: 690px; margin: 0; color: #bdd1e8; font-size: 15px; line-height: 1.65; }
+.starter-offer-list { margin: 18px 0 13px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; }
+.starter-offer-list li { position: relative; padding-left: 19px; color: white; font-size: 13px; font-weight: 700; }
+.starter-offer-list li::before { content: "✓"; position: absolute; left: 0; color: var(--sky); font-weight: 900; }
+.starter-offer-copy .starter-offer-term { max-width: 720px; color: #9fb9d7; font-size: 11px; }
 .starter-offer-action { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
 .starter-offer-price { display: flex; align-items: baseline; gap: 8px; }
 .starter-offer-price del { margin-right: 8px; color: #a9c1dc; font-size: 18px; font-weight: 700; text-decoration-thickness: 2px; }
