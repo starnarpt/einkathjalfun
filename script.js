@@ -47,6 +47,11 @@ personalTraining?.querySelectorAll('.commitment-button').forEach((button) => {
       const price = card.getAttribute(`data-price-${months}`);
       const priceElement = card.querySelector('div strong');
       if (price && priceElement) priceElement.textContent = price;
+      const periodElement = card.querySelector('div span');
+      if (periodElement) {
+        const isSeasonalSoloMonth = months === '1' && card.closest('#solo-options');
+        periodElement.textContent = isSeasonalSoloMonth ? 'kr. fyrsti mán.' : 'kr./mán.';
+      }
       const oldPrice = card.getAttribute(`data-old-price-${months}`);
       const oldPriceElement = card.querySelector('.personal-old-price');
       if (oldPrice && oldPriceElement) oldPriceElement.textContent = oldPrice;
@@ -56,7 +61,8 @@ personalTraining?.querySelectorAll('.commitment-button').forEach((button) => {
         savingElement.textContent = saving ? `Þú sparar ${saving} kr. samtals` : '';
         savingElement.hidden = !saving;
       }
-      card.dataset.package = `${card.dataset.basePackage} · ${months} ${months === '1' ? 'mánuður' : 'mánuðir'}`;
+      const seasonalLabel = months === '1' && card.closest('#solo-options') ? ' · hausttilboð' : '';
+      card.dataset.package = `${card.dataset.basePackage} · ${months} ${months === '1' ? 'mánuður' : 'mánuðir'}${seasonalLabel}`;
     });
   });
 });
