@@ -114,6 +114,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 
 .pricing-section { background: var(--off-white); max-width: none; width: 100%; padding-inline: max(24px, calc((100vw - 1180px)/2)); }
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.pricing-grid.two-options { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 920px; width: 100%; margin-inline: auto; }
 .pricing-section { display: flex; flex-direction: column; }
 .pricing-section > .section-heading { order: 0; }
 .deal-banner { order: 0; margin: -18px 0 48px; padding: 18px 24px; display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 18px; border: 1px solid #a8d3ff; border-radius: 15px; background: linear-gradient(90deg,#e5f3ff,#f7fbff); color: var(--blue-deep); }
@@ -128,7 +129,6 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .inperson-highlight .eyebrow span { background: var(--sky); }
 .pricing-grid { order: 2; }
 #einka-val { order: 3; }
-#fjar-val { order: 4; }
 .single-session { order: 5; }
 .pricing-note { order: 6; }
 .price-card { background: white; padding: 32px; border: 1px solid var(--line); border-radius: 20px; position: relative; display: flex; flex-direction: column; }
@@ -271,6 +271,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .remote-card-main { left: 42px; top: 95px; width: 260px; transform: rotate(-3deg); }
 .remote-card-feedback { right: 38px; bottom: 85px; width: 290px; transform: rotate(3deg); }
 .comparison-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; max-width: 980px; margin-inline: auto; }
+.comparison-grid.single-comparison { grid-template-columns: minmax(0,760px); justify-content: center; }
 .comparison-card { padding: 42px; border: 1px solid var(--line); border-radius: 22px; background: white; }
 .comparison-card.featured { color: white; background: var(--blue-deep); border-color: var(--blue-deep); box-shadow: var(--shadow); }
 .comparison-card > small { color: var(--blue); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
