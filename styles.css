@@ -254,7 +254,7 @@ h1 em, h2 em { color: var(--blue); font-style: normal; }
 .training-moment-section { padding-top: 0; background: var(--off-white); }
 .training-moment { position: relative; min-height: 560px; overflow: hidden; border-radius: 26px; background: var(--blue-deep); box-shadow: var(--shadow); }
 .training-moment::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 42%, rgba(4,24,54,.08) 62%, rgba(4,24,54,.82) 100%); pointer-events: none; }
-.training-moment img { width: 100%; height: 100%; min-height: 560px; display: block; object-fit: cover; object-position: center; }
+.training-moment img { width: 100%; height: 100%; min-height: 560px; display: block; object-fit: cover; object-position: center 68%; }
 .training-moment figcaption { position: absolute; z-index: 1; right: clamp(24px,5vw,70px); bottom: clamp(24px,5vw,60px); max-width: 390px; color: white; text-align: right; }
 .training-moment figcaption .eyebrow { justify-content: flex-end; margin-bottom: 18px; }
 .training-moment figcaption strong { display: block; font: 800 clamp(38px,4vw,64px)/.95 var(--display); text-transform: uppercase; }
@@ -368,7 +368,7 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .starter-offer-inner { grid-template-columns: 1fr; gap: 30px; }
   .starter-offer-action { align-items: flex-start; }
   .training-moment { min-height: 500px; }
-  .training-moment img { min-height: 500px; object-position: 58% center; }
+  .training-moment img { min-height: 500px; object-position: 58% 68%; }
 }
 
 @media (max-width: 620px) {
@@ -431,7 +431,7 @@ footer { padding: 45px 0; background: #061d3b; color: white; }
   .training-moment-section { padding-top: 0; }
   .training-moment { min-height: 560px; border-radius: 20px; }
   .training-moment::after { background: linear-gradient(0deg, rgba(4,24,54,.92) 0%, rgba(4,24,54,.28) 48%, transparent 72%); }
-  .training-moment img { min-height: 560px; object-position: 66% center; }
+  .training-moment img { min-height: 560px; object-position: 66% 65%; }
   .training-moment figcaption { left: 22px; right: 22px; bottom: 25px; text-align: left; }
   .training-moment figcaption .eyebrow { justify-content: flex-start; }
   .comparison-grid { grid-template-columns: 1fr; }
