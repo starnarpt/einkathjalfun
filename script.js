@@ -12,6 +12,19 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
+// Re-align cross-page anchor links after images and fonts have settled.
+// This keeps the sticky header from covering the requested section.
+const alignHashTarget = () => {
+  if (!window.location.hash) return;
+  const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+  if (!target) return;
+  target.scrollIntoView({ block: 'start', behavior: 'auto' });
+};
+
+window.addEventListener('load', () => {
+  window.setTimeout(alignHashTarget, 80);
+});
+
 const packageSelect = document.querySelector('#package-select');
 document.querySelectorAll('.package-button').forEach((button) => {
   button.addEventListener('click', () => {
